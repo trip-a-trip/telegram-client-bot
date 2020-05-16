@@ -9,8 +9,9 @@
     "@commitlint/config-conventional": "^8.3.4",
     "@solid-soda/tsn": "^1.2.3",
     "@types/node": "12",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
     "@yarnpkg/pnpify": "^2.0.0-rc.22",
-    "babel-eslint": "^10.1.0",
     "commitizen": "^4.0.4",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
@@ -35,7 +36,7 @@
     "types": "yarn tsc --noEmit",
     "pretty": "yarn prettier --write .",
     "commit": "yarn git-cz",
-    "lint:code": "yarn eslint \"./**/*.{js,jsx}\"",
+    "lint:code": "yarn eslint \"./**/*.{ts,tsx}\"",
     "release": "yarn standard-version"
   },
   "prettier": {

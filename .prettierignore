@@ -2,3 +2,6 @@
 node_modules
 .pnp.js
 .vscode
+*.log
+.env
+dist

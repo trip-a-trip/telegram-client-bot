@@ -1,7 +1,8 @@
 {
   "plugins": [
     "unicorn",
-    "eslint-plugin-import-helpers"
+    "eslint-plugin-import-helpers",
+    "@typescript-eslint"
   ],
   "extends": [
     "airbnb-base",
@@ -55,15 +56,23 @@
           "ignoreCase": true
         }
       }
-    ]
+    ],
+    "no-unused-vars": 0,
+    "no-useless-constructor": 0,
+    "no-empty-function": [
+      "error",
+      {
+        "allow": [
+          "constructors"
+        ]
+      }
+    ],
+    "react/prop-types": 0
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-      "legacyDecorators": true
-    },
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "tsconfig.json"
   }
 }
