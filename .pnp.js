@@ -127,7 +127,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "nest-telegram",
-        "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"
+        "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.7"
       ],
       [
         "nodemon",
@@ -201,7 +201,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:18.0.1"],
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
-            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"],
+            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.7"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
             ["pm2", "npm:4.4.0"],
@@ -8138,10 +8138,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["nest-telegram", [
-        ["virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5", {
-          "packageLocation": "./.yarn/$$virtual/nest-telegram-virtual-2f0f5691ef/0/cache/nest-telegram-npm-0.6.5-67a8b775c9-3.zip/node_modules/nest-telegram/",
+        ["virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.7", {
+          "packageLocation": "./.yarn/$$virtual/nest-telegram-virtual-956f639182/0/cache/nest-telegram-npm-0.6.7-747c37d584-3.zip/node_modules/nest-telegram/",
           "packageDependencies": [
-            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"],
+            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.7"],
             ["@nestjs/common", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:7.0.13"],
             ["lodash", "npm:4.17.15"],
             ["reflect-metadata", "npm:0.1.13"],
@@ -12322,7 +12322,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:18.0.1"],
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
-            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"],
+            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.7"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
             ["pm2", "npm:4.4.0"],

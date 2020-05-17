@@ -7144,9 +7144,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nest-telegram@npm:^0.6.5":
-  version: 0.6.5
-  resolution: "nest-telegram@npm:0.6.5"
+"nest-telegram@npm:^0.6.7":
+  version: 0.6.7
+  resolution: "nest-telegram@npm:0.6.7"
   dependencies:
     "@nestjs/common": ^7.0
     lodash: ^4.17.15
@@ -7154,7 +7154,7 @@ fsevents@^1.2.7:
     telegraf: ^3.38.0
   peerDependencies:
     reflect-metadata: ^0.1.13
-  checksum: 3/956d0881df0cd76d3ae578c81fb31ea3ae034c197521d2afe8beee00999df447976185b4bf947364822e199e2efc4fd5a4c5afe4e7659664d32744589b0174c0
+  checksum: 3/b593605a6668fe017f8b4585eb5e1065ab09d6a3f7fa1a0c16cbb70f966f5631ffa9fbb0ae285383618e77648d3b7bdd5bedba4bce3d4bc44121f5394c6567f8
   languageName: node
   linkType: hard
 
@@ -10981,7 +10981,7 @@ fsevents@^1.2.7:
     eslint-plugin-unicorn: ^18.0.1
     husky: ^4.2.5
     lint-staged: ^10.1.3
-    nest-telegram: ^0.6.5
+    nest-telegram: ^0.6.7
     nodemon: ^2.0.4
     pg: ^8.2.1
     pm2: ^4.4.0

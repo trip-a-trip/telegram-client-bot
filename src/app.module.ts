@@ -8,6 +8,7 @@ import { ConfigModule } from './external/config.module';
 import { typeOrmProvider } from './external/typeOrmProvider';
 import { TelegramOptionsFactory } from './external/TelegramOptionsFactory';
 import { WelcomeHandler } from './presentation/telegram/WelcomeHandler';
+import { LocationHandler } from './presentation/telegram/LocationHandler';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { WelcomeHandler } from './presentation/telegram/WelcomeHandler';
     }),
   ],
   controllers: [],
-  providers: [WelcomeHandler],
+  providers: [WelcomeHandler, LocationHandler],
 })
 export class AppModule implements NestModule {
   constructor(
