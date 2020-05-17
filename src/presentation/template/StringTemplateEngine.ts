@@ -1,8 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { Venue, VenueKind } from '@trip-a-trip/lib';
+import { take, last } from 'lodash';
 
 import { TemplateEngine } from './TemplateEngine';
 import { TemplateName } from './TemplateName';
+
+const makeLink = (title: string, url: string) => `[${title}](${url})`;
 
 @Injectable()
 export class StringTemplateEngine implements TemplateEngine {
@@ -23,6 +26,7 @@ export class StringTemplateEngine implements TemplateEngine {
     const marks = [venue.isAmazing && '😍', venue.isExpensive && '💸']
       .filter(Boolean)
       .join(' ');
+
     const kindMap = {
       [VenueKind.BiteDrink]: 'выпить чаю/кофе',
       [VenueKind.Lunch]: 'пообедать',
@@ -30,16 +34,29 @@ export class StringTemplateEngine implements TemplateEngine {
       [VenueKind.Dinner]: 'поужинать',
     };
 
-    const kinds = venue.kind.map((kind) => kindMap[kind]).join(', ');
+    const kindVariants = venue.kind.map((kind) => kindMap[kind]);
+
+    const kinds =
+      kindVariants.length > 1
+        ? `${take(kindVariants, kindVariants.length - 1).join(', ')} и ${last(
+            kindVariants,
+          )}`
+        : last(kindVariants);
+
+    const links = venue.links
+      .map((link) => makeLink(link.title, link.url))
+      .join('\n');
 
     return [
       `${marks} *${venue.name}*`,
       venue.description,
       venue.kind.length > 0 && `Тут можно _${kinds}_.`,
       venue.address &&
-        `[${venue.address}](https://maps.google.com?q=${encodeURI(
+        makeLink(
           venue.address,
-        )})`,
+          `https://maps.google.com?q=${encodeURI(venue.address)}`,
+        ),
+      links,
     ]
       .filter(Boolean)
       .join('\n\n');

@@ -67,7 +67,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@trip-a-trip/lib",
-        "npm:1.2.0"
+        "npm:1.3.0"
+      ],
+      [
+        "@types/lodash",
+        "npm:4.14.151"
       ],
       [
         "@types/node",
@@ -130,6 +134,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:10.2.2"
       ],
       [
+        "lodash",
+        "npm:4.17.15"
+      ],
+      [
         "nest-telegram",
         "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.8"
       ],
@@ -190,7 +198,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/config", "npm:2.2.0"],
             ["@solid-soda/evolutions", "npm:0.1.2"],
             ["@solid-soda/tsn", "npm:1.2.3"],
-            ["@trip-a-trip/lib", "npm:1.2.0"],
+            ["@trip-a-trip/lib", "npm:1.3.0"],
+            ["@types/lodash", "npm:4.14.151"],
             ["@types/node", "npm:12.12.39"],
             ["@typescript-eslint/eslint-plugin", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
             ["@typescript-eslint/parser", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
@@ -206,6 +215,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:18.0.1"],
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
+            ["lodash", "npm:4.17.15"],
             ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.8"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
@@ -784,10 +794,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@trip-a-trip/lib", [
-        ["npm:1.2.0", {
-          "packageLocation": "./.yarn/cache/@trip-a-trip-lib-npm-1.2.0-016f1e724e-3.zip/node_modules/@trip-a-trip/lib/",
+        ["npm:1.3.0", {
+          "packageLocation": "./.yarn/cache/@trip-a-trip-lib-npm-1.3.0-c30305c861-3.zip/node_modules/@trip-a-trip/lib/",
           "packageDependencies": [
-            ["@trip-a-trip/lib", "npm:1.2.0"],
+            ["@trip-a-trip/lib", "npm:1.3.0"],
             ["axios", "npm:0.19.2"]
           ],
           "linkType": "HARD",
@@ -887,6 +897,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/keyv", "npm:3.1.1"],
             ["@types/node", "npm:13.13.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/lodash", [
+        ["npm:4.14.151", {
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.151-40c23097e1-3.zip/node_modules/@types/lodash/",
+          "packageDependencies": [
+            ["@types/lodash", "npm:4.14.151"]
           ],
           "linkType": "HARD",
         }]
@@ -12322,7 +12341,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/config", "npm:2.2.0"],
             ["@solid-soda/evolutions", "npm:0.1.2"],
             ["@solid-soda/tsn", "npm:1.2.3"],
-            ["@trip-a-trip/lib", "npm:1.2.0"],
+            ["@trip-a-trip/lib", "npm:1.3.0"],
+            ["@types/lodash", "npm:4.14.151"],
             ["@types/node", "npm:12.12.39"],
             ["@typescript-eslint/eslint-plugin", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
             ["@typescript-eslint/parser", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
@@ -12338,6 +12358,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:18.0.1"],
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
+            ["lodash", "npm:4.17.15"],
             ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.8"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
