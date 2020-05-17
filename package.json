@@ -71,6 +71,7 @@
     "@nestjs/typeorm": "^7.0.0",
     "@solid-soda/config": "^2.2.0",
     "@solid-soda/evolutions": "^0.1.2",
+    "nest-telegram": "^0.6.5",
     "pg": "^8.2.1",
     "pm2": "^4.4.0",
     "reflect-metadata": "^0.1.13",

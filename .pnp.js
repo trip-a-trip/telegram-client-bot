@@ -126,6 +126,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:10.2.2"
       ],
       [
+        "nest-telegram",
+        "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"
+      ],
+      [
         "nodemon",
         "npm:2.0.4"
       ],
@@ -197,6 +201,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:18.0.1"],
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
+            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
             ["pm2", "npm:4.4.0"],
@@ -7931,6 +7936,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["module-alias", [
+        ["npm:2.2.2", {
+          "packageLocation": "./.yarn/cache/module-alias-npm-2.2.2-576bd37c03-3.zip/node_modules/module-alias/",
+          "packageDependencies": [
+            ["module-alias", "npm:2.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["module-details-from-path", [
         ["npm:1.0.3", {
           "packageLocation": "./.yarn/cache/module-details-from-path-npm-1.0.3-396d5203b4-3.zip/node_modules/module-details-from-path/",
@@ -8119,6 +8133,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/neo-async-npm-2.6.1-96bc443be6-3.zip/node_modules/neo-async/",
           "packageDependencies": [
             ["neo-async", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["nest-telegram", [
+        ["virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5", {
+          "packageLocation": "./.yarn/$$virtual/nest-telegram-virtual-2f0f5691ef/0/cache/nest-telegram-npm-0.6.5-67a8b775c9-3.zip/node_modules/nest-telegram/",
+          "packageDependencies": [
+            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"],
+            ["@nestjs/common", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:7.0.13"],
+            ["lodash", "npm:4.17.15"],
+            ["reflect-metadata", "npm:0.1.13"],
+            ["rxjs", "npm:6.5.5"],
+            ["telegraf", "npm:3.38.0"]
+          ],
+          "packagePeers": [
+            "reflect-metadata"
           ],
           "linkType": "HARD",
         }]
@@ -10393,6 +10424,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["sandwich-stream", [
+        ["npm:2.0.2", {
+          "packageLocation": "./.yarn/cache/sandwich-stream-npm-2.0.2-76bdc6c560-3.zip/node_modules/sandwich-stream/",
+          "packageDependencies": [
+            ["sandwich-stream", "npm:2.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["sax", [
         ["npm:1.2.4", {
           "packageLocation": "./.yarn/cache/sax-npm-1.2.4-178f05f12f-3.zip/node_modules/sax/",
@@ -11390,6 +11430,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["telegraf", [
+        ["npm:3.38.0", {
+          "packageLocation": "./.yarn/cache/telegraf-npm-3.38.0-9b2f9198e3-3.zip/node_modules/telegraf/",
+          "packageDependencies": [
+            ["telegraf", "npm:3.38.0"],
+            ["debug", "virtual:d27045f313cae7cbc212b229738d5843f6d2265eba3ea36069f78075a79d301bc17e702a21a7b811ca9aa59de4cb7943fb27cda91a0e7d8a8ad547668124b185#npm:4.1.1"],
+            ["minimist", "npm:1.2.5"],
+            ["module-alias", "npm:2.2.2"],
+            ["node-fetch", "npm:2.6.0"],
+            ["sandwich-stream", "npm:2.0.2"],
+            ["telegram-typings", "npm:3.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["telegram-typings", [
+        ["npm:3.6.1", {
+          "packageLocation": "./.yarn/cache/telegram-typings-npm-3.6.1-141417fc65-3.zip/node_modules/telegram-typings/",
+          "packageDependencies": [
+            ["telegram-typings", "npm:3.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["term-size", [
         ["npm:2.2.0", {
           "packageLocation": "./.yarn/unplugged/term-size-npm-2.2.0-2f8b439547/node_modules/term-size/",
@@ -12258,6 +12322,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:18.0.1"],
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
+            ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.5"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
             ["pm2", "npm:4.4.0"],

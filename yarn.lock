@@ -213,7 +213,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:^7.0.13":
+"@nestjs/common@npm:^7.0, @nestjs/common@npm:^7.0.13":
   version: 7.0.13
   resolution: "@nestjs/common@npm:7.0.13"
   dependencies:
@@ -6969,6 +6969,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"module-alias@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "module-alias@npm:2.2.2"
+  checksum: 3/1b37943df4fbe56799688eb3496f5113f7f1e18ff7a53bd3543e93fd4ee6c4b04e1548fc0cb49ae73e086b18ee712ab3321f6d7f5444cf413c638914decb8918
+  languageName: node
+  linkType: hard
+
 "module-details-from-path@npm:^1.0.3":
   version: 1.0.3
   resolution: "module-details-from-path@npm:1.0.3"
@@ -7137,6 +7144,20 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"nest-telegram@npm:^0.6.5":
+  version: 0.6.5
+  resolution: "nest-telegram@npm:0.6.5"
+  dependencies:
+    "@nestjs/common": ^7.0
+    lodash: ^4.17.15
+    rxjs: ^6.0
+    telegraf: ^3.38.0
+  peerDependencies:
+    reflect-metadata: ^0.1.13
+  checksum: 3/956d0881df0cd76d3ae578c81fb31ea3ae034c197521d2afe8beee00999df447976185b4bf947364822e199e2efc4fd5a4c5afe4e7659664d32744589b0174c0
+  languageName: node
+  linkType: hard
+
 "netmask@npm:^1.0.6":
   version: 1.0.6
   resolution: "netmask@npm:1.0.6"
@@ -7184,7 +7205,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.3.0":
+"node-fetch@npm:^2.2.0, node-fetch@npm:^2.3.0":
   version: 2.6.0
   resolution: "node-fetch@npm:2.6.0"
   checksum: 3/dd9f586a9f7ddb7dd94d2aba9cb693d32f5001e9850098512fbc8a4cbdd56838afa08ed0a6725b9fce9b01ec12b713e622cbfc16d92762d8b937b238330a632a
@@ -9165,7 +9186,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^6.3.3, rxjs@npm:^6.4.0, rxjs@npm:^6.5.3, rxjs@npm:^6.5.5":
+"rxjs@npm:^6.0, rxjs@npm:^6.3.3, rxjs@npm:^6.4.0, rxjs@npm:^6.5.3, rxjs@npm:^6.5.5":
   version: 6.5.5
   resolution: "rxjs@npm:6.5.5"
   dependencies:
@@ -9210,6 +9231,13 @@ fsevents@^1.2.7:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: 3/549ba83f5b314b59898efe3422120ce1ca7987a6eae5925a5fa5db930dc414d4a9dde0a5594f89638cd6ea60b6840ea961872908933ac2428d1726489db46fa5
+  languageName: node
+  linkType: hard
+
+"sandwich-stream@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "sandwich-stream@npm:2.0.2"
+  checksum: 3/f88483282e71e6d887119d8726fdaee56914fcab9df99d4777de650188fb823df314237eb6d2938b3e93d04054a047e2f774c8667014e8f4582b086d0c060ce9
   languageName: node
   linkType: hard
 
@@ -10149,6 +10177,29 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"telegraf@npm:^3.38.0":
+  version: 3.38.0
+  resolution: "telegraf@npm:3.38.0"
+  dependencies:
+    debug: ^4.0.1
+    minimist: ^1.2.0
+    module-alias: ^2.2.2
+    node-fetch: ^2.2.0
+    sandwich-stream: ^2.0.1
+    telegram-typings: ^3.6.0
+  bin:
+    telegraf: ./bin/telegraf
+  checksum: 3/468e16ba3124b333363ce6019d64a35c1c75caa777df8b2466e018089bbcd2926888ef87abdf232bdd1c15d14b9e568259fdf1749fdff8cf4a9ed22cae707082
+  languageName: node
+  linkType: hard
+
+"telegram-typings@npm:^3.6.0":
+  version: 3.6.1
+  resolution: "telegram-typings@npm:3.6.1"
+  checksum: 3/a2aa1190f826e45228a3b08c7d51718abd7c374b8ad0f79f5ebc6bd0fe4e0da7f8e7f1432b52e351df89d31d6d7384a71636c98432b5458b36b8f3fa0ea76721
+  languageName: node
+  linkType: hard
+
 "term-size@npm:^2.1.0":
   version: 2.2.0
   resolution: "term-size@npm:2.2.0"
@@ -10930,6 +10981,7 @@ fsevents@^1.2.7:
     eslint-plugin-unicorn: ^18.0.1
     husky: ^4.2.5
     lint-staged: ^10.1.3
+    nest-telegram: ^0.6.5
     nodemon: ^2.0.4
     pg: ^8.2.1
     pm2: ^4.4.0
