@@ -17,6 +17,10 @@ export class StringTemplateEngine implements TemplateEngine {
         return this.renderNotFound();
       case TemplateName.NoMore:
         return this.renderNoMore();
+      case TemplateName.Hello:
+        return this.renderHello();
+      case TemplateName.Help:
+        return this.renderHelp();
       default:
         throw new Error('Template nor found');
     }
@@ -68,5 +72,23 @@ export class StringTemplateEngine implements TemplateEngine {
 
   private renderNoMore() {
     return 'Больше вариантов нет 🦁';
+  }
+
+  private renderHello() {
+    return [
+      'Привет. Я — Игорь Камышев, и я очень люблю еду.',
+      'Все заведения, где хорошо — в этом боте. Он умеет находить еду рядом, подбирать её по времени суток и предлагать разные варианты.',
+      [
+        'Это мои представления о прекрасном. У заведений нет рейтинга, но некоторые из них помечены эмодзи:',
+        ' 😍 — эмейзинг место',
+        ' 💸 — дороговато, но без жести',
+      ].join('\n'),
+      'Пиши фидбеки (@igorkamyshev), рассказывай друзьям, ешь вкусно.',
+      this.renderHelp(),
+    ].join('\n\n');
+  }
+
+  private renderHelp() {
+    return 'Отправь геопозицию, чтобы получить совет.';
   }
 }
