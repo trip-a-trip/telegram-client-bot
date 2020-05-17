@@ -24,7 +24,7 @@ export const typeOrmProvider: TypeOrmModuleAsyncOptions = {
       username: config.getStringOrThrow('DB_USER'),
       password: config.getStringOrThrow('DB_PASSWORD'),
       database: config.getStringOrThrow('DB_NAME'),
-      entities: [join(__dirname, '/../core/**/*.entity.{ts,js}')],
+      entities: [join(__dirname, '/../**/*.entity.{ts,js}')],
       synchronize: false,
       ssl: createSslConfig(),
     };

@@ -1,7 +1,6 @@
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TelegramModule, TelegramBot } from 'nest-telegram';
-import { Configuration } from '@solid-soda/config';
 import { ModuleRef } from '@nestjs/core';
 
 import { ConfigModule } from './external/config.module';
@@ -9,18 +8,30 @@ import { typeOrmProvider } from './external/typeOrmProvider';
 import { TelegramOptionsFactory } from './external/TelegramOptionsFactory';
 import { WelcomeHandler } from './presentation/telegram/WelcomeHandler';
 import { LocationHandler } from './presentation/telegram/LocationHandler';
+import { Account } from './domain/Account.entity';
+import { PlatformModule } from './platform/platform.module';
+import { CurrentAccount } from './presentation/telegram/CurrentAccount';
+import { StringTemplateEngine } from './presentation/template/StringTemplateEngine';
+import { TemplateEngine } from './presentation/template/TemplateEngine';
 
 @Module({
   imports: [
     ConfigModule,
+    PlatformModule,
     TypeOrmModule.forRootAsync(typeOrmProvider),
+    TypeOrmModule.forFeature([Account]),
     TelegramModule.forRootAsync({
       imports: [ConfigModule],
       useClass: TelegramOptionsFactory,
     }),
   ],
   controllers: [],
-  providers: [WelcomeHandler, LocationHandler],
+  providers: [
+    CurrentAccount,
+    WelcomeHandler,
+    LocationHandler,
+    { provide: TemplateEngine, useClass: StringTemplateEngine },
+  ],
 })
 export class AppModule implements NestModule {
   constructor(
