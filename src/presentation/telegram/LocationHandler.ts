@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { TelegramActionHandler, Context, PipeContext } from 'nest-telegram';
-import { EatClient, Coordinates } from '@trip-a-trip/lib';
+import { EatClient, Venue } from '@trip-a-trip/lib';
 
 import { Account } from '&app/domain/Account.entity';
 
@@ -15,7 +15,7 @@ export class LocationHandler {
     private readonly template: TemplateEngine,
   ) {}
 
-  @TelegramActionHandler({ location: true })
+  @TelegramActionHandler({ on: ['location'] })
   async location(
     ctx: Context,
     @PipeContext(CurrentAccount)
@@ -27,27 +27,68 @@ export class LocationHandler {
 
     const { location } = ctx.message;
 
-    await this.replyWithVenue(ctx, account, location);
-  }
-
-  private async replyWithVenue(
-    context: Context,
-    account: Account,
-    location: Coordinates,
-  ) {
     const venue = await this.eat.findVenue(account.userId, location);
 
     if (!venue) {
       const content = await this.template.render(TemplateName.NotFound);
-      context.replyWithMarkdown(content);
+      await ctx.replyWithMarkdown(content);
       return;
     }
 
+    await this.replyWithVenue(ctx, venue);
+  }
+
+  @TelegramActionHandler({ on: ['callback_query'] })
+  async more(
+    ctx: Context,
+    @PipeContext(CurrentAccount)
+    account: Account,
+  ) {
+    if (!ctx.callbackQuery || !ctx.callbackQuery.data) {
+      throw new Error('Okay');
+    }
+
+    const data = JSON.parse(ctx.callbackQuery.data);
+
+    const venue = await this.eat.findVenue(account.userId, data);
+
+    if (!venue) {
+      const content = await this.template.render(TemplateName.NotFound);
+      await ctx.replyWithMarkdown(content);
+      return;
+    }
+
+    if (data.ids.includes(venue.id)) {
+      const content = await this.template.render(TemplateName.NoMore);
+      await ctx.replyWithMarkdown(content);
+      return;
+    }
+
+    await this.replyWithVenue(ctx, venue, data.ids);
+  }
+
+  private async replyWithVenue(
+    context: Context,
+    venue: Venue,
+    recentIds: string[] = [],
+  ) {
     const content = await this.template.render(TemplateName.Venue, venue);
-    context.replyWithMarkdown(content, { disable_web_page_preview: true });
-    context.replyWithLocation(
+    const moreData = JSON.stringify({
+      ...venue.coordinates,
+      ids: [venue.id, ...recentIds],
+    });
+
+    await context.replyWithMarkdown(content, {
+      disable_web_page_preview: true,
+    });
+    await context.replyWithLocation(
       venue.coordinates.latitude,
       venue.coordinates.longitude,
+      {
+        reply_markup: {
+          inline_keyboard: [[{ text: 'Ещё', callback_data: moreData }]],
+        },
+      },
     );
   }
 }

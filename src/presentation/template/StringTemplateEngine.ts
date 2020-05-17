@@ -12,6 +12,8 @@ export class StringTemplateEngine implements TemplateEngine {
         return this.renderVenue(context);
       case TemplateName.NotFound:
         return this.renderNotFound();
+      case TemplateName.NoMore:
+        return this.renderNoMore();
       default:
         throw new Error('Template nor found');
     }
@@ -45,5 +47,9 @@ export class StringTemplateEngine implements TemplateEngine {
 
   private renderNotFound() {
     return 'Я не знаю где поесть в этой локации, сорян 🌚';
+  }
+
+  private renderNoMore() {
+    return 'Больше вариантов нет 🦁';
   }
 }
