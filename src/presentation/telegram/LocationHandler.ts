@@ -82,6 +82,7 @@ export class LocationHandler {
       venue.coordinates.longitude,
       {
         reply_markup: {
+          // TODO: callback to database, here only id
           inline_keyboard: [[{ text: 'Ещё', callback_data: moreData }]],
         },
       },
