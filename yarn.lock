@@ -10707,6 +10707,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"uid@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "uid@npm:1.0.0"
+  checksum: 3/746151b6d7698e578c1de676c6dbd2f475ebd7dd2d91b407958ba7ddc6216d9ab772233392fde1930673a8d69bc303327477807fd367e1696e495dfb111eda4e
+  languageName: node
+  linkType: hard
+
 "unc-path-regex@npm:^0.1.2":
   version: 0.1.2
   resolution: "unc-path-regex@npm:0.1.2"
@@ -11030,6 +11037,7 @@ fsevents@^1.2.7:
     ts-node: ^8.10.1
     typeorm: ^0.2.24
     typescript: ^3.9.2
+    uid: ^1.0.0
   languageName: unknown
   linkType: soft
 

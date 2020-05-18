@@ -13,13 +13,15 @@ import { PlatformModule } from './platform/platform.module';
 import { CurrentAccount } from './presentation/telegram/CurrentAccount';
 import { StringTemplateEngine } from './presentation/template/StringTemplateEngine';
 import { TemplateEngine } from './presentation/template/TemplateEngine';
+import { CallbackData } from './domain/CallbackData.entity';
+import { CallbackDataStore } from './application/CallbackDataStore';
 
 @Module({
   imports: [
     ConfigModule,
     PlatformModule,
     TypeOrmModule.forRootAsync(typeOrmProvider),
-    TypeOrmModule.forFeature([Account]),
+    TypeOrmModule.forFeature([Account, CallbackData]),
     TelegramModule.forRootAsync({
       imports: [ConfigModule],
       useClass: TelegramOptionsFactory,
@@ -30,6 +32,7 @@ import { TemplateEngine } from './presentation/template/TemplateEngine';
     CurrentAccount,
     WelcomeHandler,
     LocationHandler,
+    CallbackDataStore,
     { provide: TemplateEngine, useClass: StringTemplateEngine },
   ],
 })
