@@ -25,7 +25,7 @@ workflows:
               only: /.*/
       - docker/build_push:
           org_name: 'tripatrip'
-          image_name: 'core-eat'
+          image_name: 'view-telegram'
           image_version: CIRCLE_TAG
           docker_username: DOCKER_USERNAME
           docker_password: DOCKER_PASSWORD
