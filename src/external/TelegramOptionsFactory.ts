@@ -12,7 +12,7 @@ export class TelegramOptionsFactory implements TelegramModuleOptionsFactory {
   createOptions(): TelegramModuleOptions {
     return {
       token: this.config.getStringOrThrow('TELEGRAM_TOKEN'),
-      sitePublicUrl: 'https://i-dont-know.kamyshev.me',
+      sitePublicUrl: this.config.getStringOrThrow('PUBLIC_URL'),
       usePolling: this.config.isDev(),
     };
   }
