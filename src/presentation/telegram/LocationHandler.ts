@@ -50,15 +50,11 @@ export class LocationHandler {
 
     const data = JSON.parse(ctx.callbackQuery.data);
 
-    const venue = await this.eat.findVenue(account.userId, data);
+    const venue = await this.eat.findVenue(account.userId, data, {
+      skipIds: data.ids,
+    });
 
     if (!venue) {
-      const content = await this.template.render(TemplateName.NotFound);
-      await ctx.replyWithMarkdown(content);
-      return;
-    }
-
-    if (data.ids.includes(venue.id)) {
       const content = await this.template.render(TemplateName.NoMore);
       await ctx.replyWithMarkdown(content);
       return;

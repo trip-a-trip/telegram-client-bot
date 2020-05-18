@@ -72,7 +72,7 @@
     "@nestjs/typeorm": "^7.0.0",
     "@solid-soda/config": "^2.2.0",
     "@solid-soda/evolutions": "^0.1.2",
-    "@trip-a-trip/lib": "^1.3.0",
+    "@trip-a-trip/lib": "^1.5.1",
     "lodash": "^4.17.15",
     "nest-telegram": "^0.6.8",
     "pg": "^8.2.1",

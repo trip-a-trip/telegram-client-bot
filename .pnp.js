@@ -67,7 +67,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@trip-a-trip/lib",
-        "npm:1.3.0"
+        "npm:1.5.1"
       ],
       [
         "@types/lodash",
@@ -198,7 +198,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/config", "npm:2.2.0"],
             ["@solid-soda/evolutions", "npm:0.1.2"],
             ["@solid-soda/tsn", "npm:1.2.3"],
-            ["@trip-a-trip/lib", "npm:1.3.0"],
+            ["@trip-a-trip/lib", "npm:1.5.1"],
             ["@types/lodash", "npm:4.14.151"],
             ["@types/node", "npm:12.12.39"],
             ["@typescript-eslint/eslint-plugin", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
@@ -794,11 +794,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@trip-a-trip/lib", [
-        ["npm:1.3.0", {
-          "packageLocation": "./.yarn/cache/@trip-a-trip-lib-npm-1.3.0-c30305c861-3.zip/node_modules/@trip-a-trip/lib/",
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/@trip-a-trip-lib-npm-1.5.1-554c5a7e60-3.zip/node_modules/@trip-a-trip/lib/",
           "packageDependencies": [
-            ["@trip-a-trip/lib", "npm:1.3.0"],
-            ["axios", "npm:0.19.2"]
+            ["@trip-a-trip/lib", "npm:1.5.1"],
+            ["axios", "npm:0.19.2"],
+            ["qs", "npm:6.9.4"]
           ],
           "linkType": "HARD",
         }]
@@ -9711,6 +9712,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["qs", "npm:6.7.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:6.9.4", {
+          "packageLocation": "./.yarn/cache/qs-npm-6.9.4-7b853cfa85-3.zip/node_modules/qs/",
+          "packageDependencies": [
+            ["qs", "npm:6.9.4"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["quick-lru", [
@@ -12341,7 +12349,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/config", "npm:2.2.0"],
             ["@solid-soda/evolutions", "npm:0.1.2"],
             ["@solid-soda/tsn", "npm:1.2.3"],
-            ["@trip-a-trip/lib", "npm:1.3.0"],
+            ["@trip-a-trip/lib", "npm:1.5.1"],
             ["@types/lodash", "npm:4.14.151"],
             ["@types/node", "npm:12.12.39"],
             ["@typescript-eslint/eslint-plugin", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
