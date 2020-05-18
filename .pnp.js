@@ -74,6 +74,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:4.14.151"
       ],
       [
+        "@types/md5",
+        "npm:2.2.0"
+      ],
+      [
         "@types/node",
         "npm:12.12.39"
       ],
@@ -138,6 +142,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:4.17.15"
       ],
       [
+        "md5",
+        "npm:2.2.1"
+      ],
+      [
         "nest-telegram",
         "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.8"
       ],
@@ -200,6 +208,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/tsn", "npm:1.2.3"],
             ["@trip-a-trip/lib", "npm:1.5.1"],
             ["@types/lodash", "npm:4.14.151"],
+            ["@types/md5", "npm:2.2.0"],
             ["@types/node", "npm:12.12.39"],
             ["@typescript-eslint/eslint-plugin", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
             ["@typescript-eslint/parser", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
@@ -216,6 +225,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
             ["lodash", "npm:4.17.15"],
+            ["md5", "npm:2.2.1"],
             ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.8"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
@@ -907,6 +917,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.151-40c23097e1-3.zip/node_modules/@types/lodash/",
           "packageDependencies": [
             ["@types/lodash", "npm:4.14.151"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/md5", [
+        ["npm:2.2.0", {
+          "packageLocation": "./.yarn/cache/@types-md5-npm-2.2.0-6b21b84c04-3.zip/node_modules/@types/md5/",
+          "packageDependencies": [
+            ["@types/md5", "npm:2.2.0"],
+            ["@types/node", "npm:13.13.6"]
           ],
           "linkType": "HARD",
         }]
@@ -12351,6 +12371,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/tsn", "npm:1.2.3"],
             ["@trip-a-trip/lib", "npm:1.5.1"],
             ["@types/lodash", "npm:4.14.151"],
+            ["@types/md5", "npm:2.2.0"],
             ["@types/node", "npm:12.12.39"],
             ["@typescript-eslint/eslint-plugin", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
             ["@typescript-eslint/parser", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.33.0"],
@@ -12367,6 +12388,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:4.2.5"],
             ["lint-staged", "npm:10.2.2"],
             ["lodash", "npm:4.17.15"],
+            ["md5", "npm:2.2.1"],
             ["nest-telegram", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:0.6.8"],
             ["nodemon", "npm:2.0.4"],
             ["pg", "npm:8.2.1"],
