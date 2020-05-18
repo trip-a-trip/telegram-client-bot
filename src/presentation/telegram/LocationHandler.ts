@@ -1,7 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { TelegramActionHandler, Context, PipeContext } from 'nest-telegram';
+import {} from 'lodash';
 import { EatClient, Venue } from '@trip-a-trip/lib';
 
+import { sleep } from '&app/utils/sleep';
 import { Account } from '&app/domain/Account.entity';
 
 import { CurrentAccount } from './CurrentAccount';
@@ -26,6 +28,7 @@ export class LocationHandler {
     }
 
     const { location } = ctx.message;
+    await ctx.replyWithChatAction('typing');
 
     const venue = await this.eat.findVenue(account.userId, location);
 
@@ -49,6 +52,7 @@ export class LocationHandler {
     }
 
     const data = JSON.parse(ctx.callbackQuery.data);
+    await ctx.replyWithChatAction('typing');
 
     const venue = await this.eat.findVenue(account.userId, data, {
       skipIds: data.ids,
@@ -77,6 +81,10 @@ export class LocationHandler {
     await context.replyWithMarkdown(content, {
       disable_web_page_preview: true,
     });
+
+    await context.replyWithChatAction('find_location');
+    await sleep(400);
+
     await context.replyWithLocation(
       venue.coordinates.latitude,
       venue.coordinates.longitude,
