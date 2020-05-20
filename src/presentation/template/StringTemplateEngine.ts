@@ -47,7 +47,7 @@ export class StringTemplateEngine implements TemplateEngine {
           )}`
         : last(kindVariants);
 
-    const links = (venue.links || [])
+    const links = venue.links
       .map((link) => makeLink(link.title, link.url))
       .join('\n');
 
