@@ -102,6 +102,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:3.2.0"
       ],
       [
+        "deepmerge",
+        "npm:4.2.2"
+      ],
+      [
         "eslint",
         "npm:6.8.0"
       ],
@@ -219,6 +223,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.0.0-rc.22"],
             ["commitizen", "npm:4.1.2"],
             ["cz-conventional-changelog", "npm:3.2.0"],
+            ["deepmerge", "npm:4.2.2"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-airbnb-base", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:14.1.0"],
             ["eslint-config-prettier", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:6.11.0"],
@@ -3754,6 +3759,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/deep-is-npm-0.1.3-0941784645-3.zip/node_modules/deep-is/",
           "packageDependencies": [
             ["deep-is", "npm:0.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["deepmerge", [
+        ["npm:4.2.2", {
+          "packageLocation": "./.yarn/cache/deepmerge-npm-4.2.2-112165ced2-3.zip/node_modules/deepmerge/",
+          "packageDependencies": [
+            ["deepmerge", "npm:4.2.2"]
           ],
           "linkType": "HARD",
         }]
@@ -12392,6 +12406,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:2.0.0-rc.22"],
             ["commitizen", "npm:4.1.2"],
             ["cz-conventional-changelog", "npm:3.2.0"],
+            ["deepmerge", "npm:4.2.2"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-airbnb-base", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:14.1.0"],
             ["eslint-config-prettier", "virtual:9859751d4084d2cb89072b4f5ca334e9d6e14fb934da5fac1aa52709d731d0332c028467df5cb7c0d99bd8ab0bf15e12dcb93b2c22f8266e289646f2b69d81fc#npm:6.11.0"],

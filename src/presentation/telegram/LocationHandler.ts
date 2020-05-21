@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { TelegramActionHandler, Context, PipeContext } from 'nest-telegram';
-import {} from 'lodash';
 import { EatClient, Venue, Coordinates } from '@trip-a-trip/lib';
 
 import { sleep } from '&app/utils/sleep';
@@ -11,6 +10,7 @@ import { CurrentAccount } from './CurrentAccount';
 import { TemplateEngine } from '../template/TemplateEngine';
 import { TemplateName } from '../template/TemplateName';
 import { MoreCallbackData } from './MoreCallbackData';
+import { mixinCustomKeyboard } from './mixinCustomKeyboard';
 
 @Injectable()
 export class LocationHandler {
@@ -88,9 +88,12 @@ export class LocationHandler {
       this.store.save(moreData),
     ]);
 
-    await context.replyWithMarkdown(content, {
-      disable_web_page_preview: true,
-    });
+    await context.replyWithMarkdown(
+      content,
+      mixinCustomKeyboard({
+        disable_web_page_preview: true,
+      }),
+    );
 
     await context.replyWithChatAction('find_location');
     await sleep(400);

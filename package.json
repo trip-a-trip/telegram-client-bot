@@ -74,6 +74,7 @@
     "@solid-soda/config": "^2.2.0",
     "@solid-soda/evolutions": "^0.1.2",
     "@trip-a-trip/lib": "^1.5.1",
+    "deepmerge": "^4.2.2",
     "lodash": "^4.17.15",
     "md5": "^2.2.1",
     "nest-telegram": "^0.6.8",
