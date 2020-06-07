@@ -16,7 +16,7 @@ async function bootstrap() {
     app.use(bot.getMiddleware(secretPath));
   }
 
-  await app.listen(3001);
+  await app.listen(3000);
 }
 
 bootstrap();
