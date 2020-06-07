@@ -507,13 +507,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trip-a-trip/lib@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "@trip-a-trip/lib@npm:1.5.1"
+"@trip-a-trip/lib@npm:^1.13.0":
+  version: 1.13.0
+  resolution: "@trip-a-trip/lib@npm:1.13.0"
   dependencies:
     axios: ^0.19.2
     qs: ^6.9.4
-  checksum: 3/f5cced859ba37c80968673237aed12e8c1e7a1241ad09e941a928fc41e39773adb0d830b758573f325eec228b59a5948d8ed4c2e85b5c026e64e0366ed5c07f3
+  checksum: 3/e7ea179594fc8ea8631fb310f108ad4a1f2f2d6bd5db2c27286de7afc6c91c7bb79a595103588f2c1f60a939b44aa5555d1fca365517caf53019ee4a4766f0c7
   languageName: node
   linkType: hard
 
@@ -11013,7 +11013,7 @@ fsevents@^1.2.7:
     "@solid-soda/config": ^2.2.0
     "@solid-soda/evolutions": ^0.1.2
     "@solid-soda/tsn": ^1.2.3
-    "@trip-a-trip/lib": ^1.5.1
+    "@trip-a-trip/lib": ^1.13.0
     "@types/lodash": ^4.14.151
     "@types/md5": ^2.2.0
     "@types/node": 12

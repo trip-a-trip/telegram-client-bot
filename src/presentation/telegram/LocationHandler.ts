@@ -10,7 +10,7 @@ import { CurrentAccount } from './CurrentAccount';
 import { TemplateEngine } from '../template/TemplateEngine';
 import { TemplateName } from '../template/TemplateName';
 import { MoreCallbackData } from './MoreCallbackData';
-import { mixinCustomKeyboard } from './mixinCustomKeyboard';
+import { MixinCustomKeyboard } from './MixinCustomKeyboard';
 
 @Injectable()
 export class LocationHandler {
@@ -18,6 +18,7 @@ export class LocationHandler {
     private readonly eat: EatClient,
     private readonly template: TemplateEngine,
     private readonly store: CallbackDataStore<MoreCallbackData>,
+    private readonly customKeyboard: MixinCustomKeyboard,
   ) {}
 
   @TelegramActionHandler({ on: ['location'] })
@@ -83,14 +84,15 @@ export class LocationHandler {
       ids: [venue.id, ...recentIds],
     };
 
-    const [content, dataId] = await Promise.all([
+    const [content, dataId, createCustomKeyboard] = await Promise.all([
       this.template.render(TemplateName.Venue, venue),
       this.store.save(moreData),
+      this.customKeyboard.transform(context),
     ]);
 
     await context.replyWithMarkdown(
       content,
-      mixinCustomKeyboard({
+      createCustomKeyboard({
         disable_web_page_preview: true,
       }),
     );

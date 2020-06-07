@@ -4,4 +4,7 @@ export enum TemplateName {
   NoMore,
   Hello,
   Help,
+  Invite,
+  AddVenueForm,
+  Invited,
 }

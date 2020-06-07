@@ -15,6 +15,10 @@ import { StringTemplateEngine } from './presentation/template/StringTemplateEngi
 import { TemplateEngine } from './presentation/template/TemplateEngine';
 import { CallbackData } from './domain/CallbackData.entity';
 import { CallbackDataStore } from './application/CallbackDataStore';
+import { CurrentCollaborator } from './presentation/telegram/CurrentCollaborator';
+import { MixinCustomKeyboard } from './presentation/telegram/MixinCustomKeyboard';
+import { CollaborationHandler } from './presentation/telegram/CollaborationHandler';
+import { TelegramErrorCatcher } from './presentation/telegram/TelegramErrorCatcher';
 
 @Module({
   imports: [
@@ -30,9 +34,13 @@ import { CallbackDataStore } from './application/CallbackDataStore';
   controllers: [],
   providers: [
     CurrentAccount,
+    CurrentCollaborator,
+    TelegramErrorCatcher,
+    MixinCustomKeyboard,
     WelcomeHandler,
     LocationHandler,
     CallbackDataStore,
+    CollaborationHandler,
     { provide: TemplateEngine, useClass: StringTemplateEngine },
   ],
 })

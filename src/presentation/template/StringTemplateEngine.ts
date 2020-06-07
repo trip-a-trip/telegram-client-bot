@@ -1,5 +1,6 @@
-import { Injectable } from '@nestjs/common';
 import { Venue, VenueKind } from '@trip-a-trip/lib';
+import { Configuration } from '@solid-soda/config';
+import { Injectable } from '@nestjs/common';
 import { take, last } from 'lodash';
 
 import { TemplateEngine } from './TemplateEngine';
@@ -9,6 +10,8 @@ const makeLink = (title: string, url: string) => `[${title}](${url})`;
 
 @Injectable()
 export class StringTemplateEngine implements TemplateEngine {
+  constructor(private readonly config: Configuration) {}
+
   async render(name: TemplateName, context?: any): Promise<string> {
     switch (name) {
       case TemplateName.Venue:
@@ -21,9 +24,44 @@ export class StringTemplateEngine implements TemplateEngine {
         return this.renderHello();
       case TemplateName.Help:
         return this.renderHelp();
+      case TemplateName.Invite:
+        return this.renderInvite(context);
+      case TemplateName.AddVenueForm:
+        return this.renderAddVenueForm(context);
+      case TemplateName.Invited:
+        return this.renderInvited();
       default:
         throw new Error('Template nor found');
     }
+  }
+
+  private renderInvited() {
+    return [
+      'Добро пожаловать 🥳',
+      'Теперь ты можешь добавлять свои любимые заведения сюда, кнопка уже появилась в меню.',
+      'Это большая отвественность, поэтому есть несколько правил.',
+      'Во-первых, иногда я буду опрашивать людей, увидевших добавленные тобой заведения, кайфанули ли они — из ответов будет складываться твой рейтинг. Большой рейтинг — можешь приглашать друзей, маленький рейтинг — не можешь добавлять заведения. Все просто.',
+      'Во-вторых, твой рейтинг влияет на рейтинг спосора (пригласившего тебя пользователя), не подведи его.',
+      'Будет здорово. Если что, пиши @igorkamyshev 🍩',
+    ].join('\n\n');
+  }
+
+  private renderAddVenueForm(token: string) {
+    const url = this.config.getStringOrThrow('VIEW_FORM_URL');
+    return [
+      `Вот [уникальная ссылка](${url}/add_venue?token=${token}), там форма, ее нужно заполинть.`,
+      'По этой ссылке можно добавить только одно место, если хочется ещё — попроси новую ссылку кнопкой.',
+      'Потом быстрая модерация, и, вуаля, заведение добавлено 🌝',
+    ].join('\n\n');
+  }
+
+  private renderInvite(code: string) {
+    return [
+      `Перешли это сообщение тому, кого хочешь пригласить 🙏`,
+      `Это приглашающий код — *${code}*`,
+      `Его просто нужно прислать в бота — *@trip_trip_robot*`,
+      'После активации можно будет свободно публиковать свои заведения 😇',
+    ].join('\n\n');
   }
 
   private renderVenue(venue: Venue) {
