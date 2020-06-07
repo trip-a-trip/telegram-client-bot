@@ -2,7 +2,7 @@ import { TelegramActionHandler, Context, PipeContext } from 'nest-telegram';
 import { Injectable } from '@nestjs/common';
 
 import {
-  CreateKustomKeyboard,
+  CreateСustomKeyboard,
   MixinCustomKeyboard,
 } from './MixinCustomKeyboard';
 import { TemplateEngine } from '../template/TemplateEngine';
@@ -16,7 +16,7 @@ export class WelcomeHandler {
   async start(
     ctx: Context,
     @PipeContext(MixinCustomKeyboard)
-    createCustomKeyboard: CreateKustomKeyboard,
+    createCustomKeyboard: CreateСustomKeyboard,
   ) {
     const content = await this.template.render(TemplateName.Hello);
     await ctx.replyWithMarkdown(content, createCustomKeyboard());
@@ -26,7 +26,7 @@ export class WelcomeHandler {
   async help(
     ctx: Context,
     @PipeContext(MixinCustomKeyboard)
-    createCustomKeyboard: CreateKustomKeyboard,
+    createCustomKeyboard: CreateСustomKeyboard,
   ) {
     const content = await this.template.render(TemplateName.Help);
     await ctx.replyWithMarkdown(content, createCustomKeyboard());

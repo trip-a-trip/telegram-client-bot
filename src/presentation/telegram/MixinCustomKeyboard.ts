@@ -6,11 +6,11 @@ import merge from 'deepmerge';
 import { INVITE_MESSAGE, ADD_VENUE_MESSAGE } from './constants';
 import { CurrentCollaborator } from './CurrentCollaborator';
 
-export type CreateKustomKeyboard = (initial?: object) => object;
+export type CreateСustomKeyboard = (initial?: object) => object;
 
 @Injectable()
 export class MixinCustomKeyboard
-  implements ContextTransformer<CreateKustomKeyboard> {
+  implements ContextTransformer<CreateСustomKeyboard> {
   constructor(private readonly currentCollaborator: CurrentCollaborator) {}
 
   async transform(ctx: Context) {

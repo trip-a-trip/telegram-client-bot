@@ -9,7 +9,7 @@ import { TemplateEngine } from '../template/TemplateEngine';
 import { TemplateName } from '../template/TemplateName';
 import {
   MixinCustomKeyboard,
-  CreateKustomKeyboard,
+  CreateСustomKeyboard,
 } from './MixinCustomKeyboard';
 import { CurrentAccount } from './CurrentAccount';
 
@@ -25,7 +25,7 @@ export class CollaborationHandler {
     ctx: Context,
     @PipeContext(CurrentAccount) profile: Account,
     @PipeContext(MixinCustomKeyboard)
-    createCustomKeyboard: CreateKustomKeyboard,
+    createCustomKeyboard: CreateСustomKeyboard,
   ) {
     if (!ctx.message) {
       throw new Error('Sorry');
@@ -43,7 +43,7 @@ export class CollaborationHandler {
     ctx: Context,
     @PipeContext(CurrentAccount) profile: Account,
     @PipeContext(MixinCustomKeyboard)
-    createCustomKeyboard: CreateKustomKeyboard,
+    createCustomKeyboard: CreateСustomKeyboard,
   ) {
     const inviteCode = await this.collaboration.createInvite(profile.userId);
 
@@ -57,7 +57,7 @@ export class CollaborationHandler {
     ctx: Context,
     @PipeContext(CurrentAccount) profile: Account,
     @PipeContext(MixinCustomKeyboard)
-    createCustomKeyboard: CreateKustomKeyboard,
+    createCustomKeyboard: CreateСustomKeyboard,
   ) {
     const publishToken = await this.collaboration.createPublicationToken(
       profile.userId,
