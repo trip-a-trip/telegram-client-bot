@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://github.com/trip-a-trip/view-telegram/compare/v1.3.3...v1.3.4) (2020-06-07)
+
+### Bug Fixes
+
+- fix typo ([b5d3f29](https://github.com/trip-a-trip/view-telegram/commit/b5d3f292ce797f9d1162990d325f5291b2006fa8))
+
 ### [1.3.3](https://github.com/trip-a-trip/view-telegram/compare/v1.3.2...v1.3.3) (2020-06-07)
 
 ### Bug Fixes
