@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "yarn nodemon",
     "build": "yarn tsn",
-    "prod": "yarn pm2-runtime ./ecosystem.config.js",
+    "prod": "yarn node dist/main.js",
     "types": "yarn tsc --noEmit",
     "pretty": "yarn prettier --write .",
     "commit": "yarn git-cz",
@@ -79,7 +79,6 @@
     "md5": "^2.2.1",
     "nest-telegram": "^0.6.8",
     "pg": "^8.2.1",
-    "pm2": "^4.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.5",
     "typeorm": "^0.2.24",
