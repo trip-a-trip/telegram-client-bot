@@ -1,4 +1,4 @@
-import { Venue, VenueKind } from '@trip-a-trip/lib';
+import { Venue, VenueKind, Draft } from '@trip-a-trip/lib';
 import { Configuration } from '@solid-soda/config';
 import { Injectable } from '@nestjs/common';
 import { take, last } from 'lodash';
@@ -30,9 +30,29 @@ export class StringTemplateEngine implements TemplateEngine {
         return this.renderAddVenueForm(context);
       case TemplateName.Invited:
         return this.renderInvited();
+      case TemplateName.Moderated:
+        return this.renderModerated(context);
       default:
         throw new Error('Template nor found');
     }
+  }
+
+  private renderModerated(draft: Draft) {
+    const messages: string[] = [];
+
+    if (draft.approved) {
+      messages.push(
+        `Заведение *${draft.fields.name}* не прошло модерацию 😢`,
+        'Если интересны подробности — напиши @igorkamyshev',
+      );
+    } else {
+      messages.push(
+        `Заведение *${draft.fields.name}* успешно прошло модерацию и уже появилось в боте 👏`,
+        'Спасибо, что вносишь свой вклад ❤️',
+      );
+    }
+
+    return messages.join('\n\n');
   }
 
   private renderInvited() {

@@ -1,6 +1,8 @@
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { TelegramModule, TelegramBot } from 'nest-telegram';
+import { MODERATION_NOTIFY_QUEUE } from '@trip-a-trip/lib';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { BullModule } from '@nestjs/bull';
 import { ModuleRef } from '@nestjs/core';
 
 import { ConfigModule } from './external/config.module';
@@ -19,6 +21,8 @@ import { CurrentCollaborator } from './presentation/telegram/CurrentCollaborator
 import { MixinCustomKeyboard } from './presentation/telegram/MixinCustomKeyboard';
 import { CollaborationHandler } from './presentation/telegram/CollaborationHandler';
 import { TelegramErrorCatcher } from './presentation/telegram/TelegramErrorCatcher';
+import { bullProvider } from './external/bullProvider';
+import { ModerationNotifyProcessor } from './presentation/queue/ModerationNotifyProcessor';
 
 @Module({
   imports: [
@@ -30,6 +34,7 @@ import { TelegramErrorCatcher } from './presentation/telegram/TelegramErrorCatch
       imports: [ConfigModule],
       useClass: TelegramOptionsFactory,
     }),
+    BullModule.registerQueueAsync(bullProvider(MODERATION_NOTIFY_QUEUE)),
   ],
   controllers: [],
   providers: [
@@ -41,6 +46,7 @@ import { TelegramErrorCatcher } from './presentation/telegram/TelegramErrorCatch
     LocationHandler,
     CallbackDataStore,
     CollaborationHandler,
+    ModerationNotifyProcessor,
     { provide: TemplateEngine, useClass: StringTemplateEngine },
   ],
 })

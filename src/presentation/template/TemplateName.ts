@@ -7,4 +7,5 @@ export enum TemplateName {
   Invite,
   AddVenueForm,
   Invited,
+  Moderated,
 }

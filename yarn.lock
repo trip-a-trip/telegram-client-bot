@@ -213,6 +213,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/bull@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@nestjs/bull@npm:0.1.1"
+  peerDependencies:
+    "@nestjs/common": ^6.10.11 || ^7.0.0
+    "@nestjs/core": ^6.10.11 || ^7.0.0
+    bull: ^3.3
+  checksum: 3/a7042bca0d8068e62fa2d2745b4a76bc94dfd9438c8bdb6d6f411141754edac1ed790bc16ff6236c0ee9e6a6a7693be74d0054489c257d091d8bdb285baf82e9
+  languageName: node
+  linkType: hard
+
 "@nestjs/common@npm:^7.0, @nestjs/common@npm:^7.0.13":
   version: 7.0.13
   resolution: "@nestjs/common@npm:7.0.13"
@@ -408,6 +419,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/bull@npm:^3.13.0":
+  version: 3.13.0
+  resolution: "@types/bull@npm:3.13.0"
+  dependencies:
+    "@types/ioredis": "*"
+  checksum: 3/4fe2cc775d5fb30f63f5b65ff101888b87f3dc4cb2e7a8e875895a2783a20f13cf13cf23db1b5f9a2ea3c1048dced3d5fac031400825c9fbe957e171093682b1
+  languageName: node
+  linkType: hard
+
 "@types/cacheable-request@npm:^6.0.1":
   version: 6.0.1
   resolution: "@types/cacheable-request@npm:6.0.1"
@@ -463,6 +483,15 @@ __metadata:
   version: 4.0.0
   resolution: "@types/http-cache-semantics@npm:4.0.0"
   checksum: 3/e16fae56d4daea4ed678b4d5918b693b44ca12fb5e479b87d242d3a35bf3a014974dcf9ed7aba7e29149fdb6c3719f9987fca51b20ef10aa84b58f86553c2f74
+  languageName: node
+  linkType: hard
+
+"@types/ioredis@npm:*":
+  version: 4.16.4
+  resolution: "@types/ioredis@npm:4.16.4"
+  dependencies:
+    "@types/node": "*"
+  checksum: 3/f0c0db481187c58189d2ef5d56d2e6e4c7291eff1f49ad055cf8eeff5f2ec5e42257a37210df6e983f958869d873015b923b1d7b2b49ed001b6e8be8f5de72a5
   languageName: node
   linkType: hard
 
@@ -1505,6 +1534,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bull@npm:^3.14.0":
+  version: 3.14.0
+  resolution: "bull@npm:3.14.0"
+  dependencies:
+    cron-parser: ^2.13.0
+    debuglog: ^1.0.0
+    get-port: ^5.1.1
+    ioredis: ^4.14.1
+    lodash: ^4.17.15
+    p-timeout: ^3.2.0
+    promise.prototype.finally: ^3.1.2
+    semver: ^6.3.0
+    util.promisify: ^1.0.1
+    uuid: ^3.4.0
+  checksum: 3/3d84aad6a8958fd65623c05963dad49fd30eeea3493ec3b3a418250282c209d26618a01f29b36560c07e22764e73a3c38b211baa0e612d74a343a66d2727c359
+  languageName: node
+  linkType: hard
+
 "busboy@npm:^0.2.11":
   version: 0.2.14
   resolution: "busboy@npm:0.2.14"
@@ -2026,6 +2073,13 @@ __metadata:
     process-nextick-args: ^2.0.0
     readable-stream: ^2.3.5
   checksum: 3/b7dda8125e898a788ac6427003337920532658b8b62b8ae3ae1c45ca877e3159c51c260efeb89f5a23b18bc62031bfcd5d2dfe5beada4a657d93f5fd2c8b7e50
+  languageName: node
+  linkType: hard
+
+"cluster-key-slot@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "cluster-key-slot@npm:1.1.0"
+  checksum: 3/3b41b06942f6b0df71029dec9df6a272be2ab78353d60fcdc5a4af3b88a749d7fb2d1d3b092db0108b2bdd104086c03edcaa3b25ef432590bb954981d6cd7715
   languageName: node
   linkType: hard
 
@@ -2616,6 +2670,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cron-parser@npm:^2.13.0":
+  version: 2.15.0
+  resolution: "cron-parser@npm:2.15.0"
+  dependencies:
+    is-nan: ^1.3.0
+    moment-timezone: ^0.5.31
+  checksum: 3/28ba67938030378139b6a6be85a626ba8e84c8955daa9c96b7386e82618c6d45eabda0cb75353982c07cd29a9c02898995d9237a520b2a370f75c0205e0bad03
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:6.0.5, cross-spawn@npm:^6.0.5":
   version: 6.0.5
   resolution: "cross-spawn@npm:6.0.5"
@@ -2756,6 +2820,13 @@ __metadata:
   dependencies:
     ms: ^2.1.1
   checksum: 3/3601a6ce96e4698ed3edf0ee6e67ef0317adfcdae2f66a43b23d1b14e8888b422337429b16dbbcba6801e7bfa6cbb8de3128fbacfb8ae1cd9bd7615ea6baf970
+  languageName: node
+  linkType: hard
+
+"debuglog@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "debuglog@npm:1.0.1"
+  checksum: 3/570fab098ed51463ff103d5dc988dfc92520ac5137c7d9d0d334a2a91aee61d3923e2c5b0dff61e2478024d2892b0ef67ef7a54789e535bc162e0b54aa8f1939
   languageName: node
   linkType: hard
 
@@ -2916,6 +2987,13 @@ __metadata:
   version: 1.0.0
   resolution: "delegates@npm:1.0.0"
   checksum: 3/7459e34d29cadd9bfd340728bfcc70ea96da5d940fb197298b523f805822680e583cba3ec34d36a18004325f1ec9de55e202a92b414d01db18cd87bb8a2ae5bd
+  languageName: node
+  linkType: hard
+
+"denque@npm:^1.1.0":
+  version: 1.4.1
+  resolution: "denque@npm:1.4.1"
+  checksum: 3/174e81b3c9407b2149216d9e793fb91d901c19b1225dceefdafe32d5abeca243382ffee9bb111a1f60e42d2791b457d029bb57379d48404b2fb351bf700b6a8c
   languageName: node
   linkType: hard
 
@@ -3160,7 +3238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-abstract@npm:^1.17.0, es-abstract@npm:^1.17.0-next.1, es-abstract@npm:^1.17.5":
+"es-abstract@npm:^1.17.0, es-abstract@npm:^1.17.0-next.0, es-abstract@npm:^1.17.0-next.1, es-abstract@npm:^1.17.2, es-abstract@npm:^1.17.5":
   version: 1.17.5
   resolution: "es-abstract@npm:1.17.5"
   dependencies:
@@ -4194,6 +4272,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"get-port@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "get-port@npm:5.1.1"
+  checksum: 3/75a5af5cef1e601cfa5a071d1b205ba94338f69f83f1092039bdf8e15351a76f5e6b7df7d3987bd3b7ad5d6893759d2bc28d36d8a4ee65976c3868d7efe7cf8c
+  languageName: node
+  linkType: hard
+
 "get-stdin@npm:7.0.0":
   version: 7.0.0
   resolution: "get-stdin@npm:7.0.0"
@@ -5021,6 +5106,23 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"ioredis@npm:^4.14.1":
+  version: 4.17.3
+  resolution: "ioredis@npm:4.17.3"
+  dependencies:
+    cluster-key-slot: ^1.1.0
+    debug: ^4.1.1
+    denque: ^1.1.0
+    lodash.defaults: ^4.2.0
+    lodash.flatten: ^4.4.0
+    redis-commands: 1.5.0
+    redis-errors: ^1.2.0
+    redis-parser: ^3.0.0
+    standard-as-callback: ^2.0.1
+  checksum: 3/06036dfe0ad2d1ce39404ab0250c891ac5a66942695c9a17c028f40b73365e60453e6b43dc7228597d22af7d59b8b582c576ddf1fb981d979990ece8850774a8
+  languageName: node
+  linkType: hard
+
 "ipaddr.js@npm:1.9.1":
   version: 1.9.1
   resolution: "ipaddr.js@npm:1.9.1"
@@ -5247,6 +5349,15 @@ fsevents@~2.1.2:
   dependencies:
     lower-case: ^1.1.0
   checksum: 3/918f9fdfe6aa219167b01c464c1ff88d01ee6caf9d4c69473f61498d1fc93778b4711b936cb37ab4846367226817d1949697699abf9f058dfaa262522ebd63d5
+  languageName: node
+  linkType: hard
+
+"is-nan@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "is-nan@npm:1.3.0"
+  dependencies:
+    define-properties: ^1.1.3
+  checksum: 3/ab2520c43596daaa38185b02736a51d22a9c0fff4a640d67b9a8f083d4ad990adc249a48508fca5373b9471ad5c09f98aa392a54f28f11a5c8ad805eb5d825ae
   languageName: node
   linkType: hard
 
@@ -5890,6 +6001,20 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"lodash.defaults@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "lodash.defaults@npm:4.2.0"
+  checksum: 3/fde72e71f7b7ece10c24e43dd601574168467d50bc76687302d40de341d5cb8e35b100105d938458747d2ad5f20d8bb736e62523ef39d1a8b40f7307c50f10ac
+  languageName: node
+  linkType: hard
+
+"lodash.flatten@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.flatten@npm:4.4.0"
+  checksum: 3/f22a7f6f163256d87345b07c76122e03d03abbf943b6c3aa5e5fafb7d5bce765013aedfc2aae7e649af0907287a2cf85de24237dbdd3ecd485a77d56e070b54c
+  languageName: node
+  linkType: hard
+
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
@@ -6427,6 +6552,22 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"moment-timezone@npm:^0.5.31":
+  version: 0.5.31
+  resolution: "moment-timezone@npm:0.5.31"
+  dependencies:
+    moment: ">= 2.9.0"
+  checksum: 3/db8c241301530919ea3091b75c067c1b919973619bed0f3b0c009eb94e44da726452a1382c099d55a876407fd4e22802b45bc51f96c5cbfbb7fbbfa6660079e8
+  languageName: node
+  linkType: hard
+
+"moment@npm:>= 2.9.0":
+  version: 2.26.0
+  resolution: "moment@npm:2.26.0"
+  checksum: 3/67bf24cd08c7aa392981f37ce1802214bc39f0f269cb77d9c7b50d9548e936fd23eacab55615882aea13736dfdb89880f2ac998400962253991e9cb0e54e8d71
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -6854,6 +6995,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"object.getownpropertydescriptors@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "object.getownpropertydescriptors@npm:2.1.0"
+  dependencies:
+    define-properties: ^1.1.3
+    es-abstract: ^1.17.0-next.1
+  checksum: 3/c33dcc3061b56ec4d9f6d30620a364a5218aba8f592662f5ce346fcf523eb0483bc865d3f52848e267217285d831ca0a3d85836787bef5f86ecfa29f77dc249e
+  languageName: node
+  linkType: hard
+
 "object.map@npm:^1.0.0":
   version: 1.0.1
   resolution: "object.map@npm:1.0.1"
@@ -7019,6 +7170,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"p-finally@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "p-finally@npm:1.0.0"
+  checksum: 3/01f49b2d9c67573b3a1cb253cd9e1ecf5c912b6ba5de8824118bbc8d647bfa6296820b5a536e91ec68a54395d4e1c58de9a381ded3b688074fb446a8fe351931
+  languageName: node
+  linkType: hard
+
 "p-limit@npm:^1.1.0":
   version: 1.3.0
   resolution: "p-limit@npm:1.3.0"
@@ -7070,6 +7228,15 @@ fsevents@~2.1.2:
   dependencies:
     aggregate-error: ^3.0.0
   checksum: 3/d51e630d72b7c38bc9e396710e7a068f0b813fe4db6f4a2d1ce2972e7fa11142c763c3aa39bcfd77c0133688c1ebfdd9b38fa3ac4c6ada20b62df26239c5c0e4
+  languageName: node
+  linkType: hard
+
+"p-timeout@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "p-timeout@npm:3.2.0"
+  dependencies:
+    p-finally: ^1.0.0
+  checksum: 3/d7e71c1547736ecd392be3c4ea956af1abd2b6f56179f37443672cfaccb41383533cdf2e927890bb5282e1eb41c979be133eef26a6a84a8224ff4f5c9455b517
   languageName: node
   linkType: hard
 
@@ -7631,6 +7798,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"promise.prototype.finally@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "promise.prototype.finally@npm:3.1.2"
+  dependencies:
+    define-properties: ^1.1.3
+    es-abstract: ^1.17.0-next.0
+    function-bind: ^1.1.1
+  checksum: 3/bad87121f91056f363df22cc7abb03901c073d0b6d593931a75be96a591bbcdd15b651122ef65221b36cc6dbb0c6cd2f37d8120d917464c642b858dfa5ea18e5
+  languageName: node
+  linkType: hard
+
 "promise@npm:^7.3.1":
   version: 7.3.1
   resolution: "promise@npm:7.3.1"
@@ -7983,6 +8161,29 @@ fsevents@~2.1.2:
     indent-string: ^4.0.0
     strip-indent: ^3.0.0
   checksum: 3/78c8aa0a1076f47e0e198bfc8a9aa7d4ae3163c6951bd5de1015e47661bba62ea36573337bbeb4b309b48cc71954edbe43ae4aa3163db1996a781b757c5c47d7
+  languageName: node
+  linkType: hard
+
+"redis-commands@npm:1.5.0":
+  version: 1.5.0
+  resolution: "redis-commands@npm:1.5.0"
+  checksum: 3/09cd949613afa4ced55c7900178aa952193505910d8f4132ae0be5f0c7096f557bdf8a07210f9ebd22bc9dad763282497852ed20200a1fef6de7887724e2b6f0
+  languageName: node
+  linkType: hard
+
+"redis-errors@npm:^1.0.0, redis-errors@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "redis-errors@npm:1.2.0"
+  checksum: 3/b260bb64a1c8523d32a56701681ac3e5cc6bb0a4eb09f1d30729ebba397021d274216ff189909c08fe3c6b706ec8b74948e20ea410b6f69d31b35bda3fb82a59
+  languageName: node
+  linkType: hard
+
+"redis-parser@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "redis-parser@npm:3.0.0"
+  dependencies:
+    redis-errors: ^1.0.0
+  checksum: 3/45dbcb05bed2c80a4aac288bbefed2347ecf3508c24d542ab42efa21fd63b5aaca4208b206f05818835a2ac43abe09250c2638c11c3b0b66a5d67e83985e350f
   languageName: node
   linkType: hard
 
@@ -8858,6 +9059,13 @@ fsevents@~2.1.2:
   version: 0.0.10
   resolution: "stack-trace@npm:0.0.10"
   checksum: 3/8e567bd9dc88f739f562e91d127cfe11740c3639900c9ddadbb3d78399171fd7236d8a7622f5a00047c162ec64e1f1869cf45daac11e4482e54ac2d98f8c3391
+  languageName: node
+  linkType: hard
+
+"standard-as-callback@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "standard-as-callback@npm:2.0.1"
+  checksum: 3/58a0ddb90d674f6af7e099c1fedd339276e98a218fd88f1a6134a4910c5ff8d272815cf8cc758b2d61fa3f523853c8fa6ef3cb0692912e7ff35870dedffa8ffc
   languageName: node
   linkType: hard
 
@@ -9940,6 +10148,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"util.promisify@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "util.promisify@npm:1.0.1"
+  dependencies:
+    define-properties: ^1.1.3
+    es-abstract: ^1.17.2
+    has-symbols: ^1.0.1
+    object.getownpropertydescriptors: ^2.1.0
+  checksum: 3/99e5b0a7a4c72d8d4db3cbc911a1d8770e7ab233b5841e1b29e56ffc6ac21142acebf5ca7d5e7afd921662a83639094b4f1197d0f4af3cb058ba28ba1a7f4b8f
+  languageName: node
+  linkType: hard
+
 "utils-merge@npm:1.0.1":
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
@@ -9965,7 +10185,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"uuid@npm:^3.3.2":
+"uuid@npm:^3.3.2, uuid@npm:^3.4.0":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
   bin:
@@ -10040,6 +10260,7 @@ fsevents@~2.1.2:
   dependencies:
     "@commitlint/cli": ^8.3.5
     "@commitlint/config-conventional": ^8.3.4
+    "@nestjs/bull": ^0.1.1
     "@nestjs/common": ^7.0.13
     "@nestjs/core": ^7.0.13
     "@nestjs/platform-express": ^7.0.13
@@ -10048,12 +10269,14 @@ fsevents@~2.1.2:
     "@solid-soda/evolutions": ^0.1.2
     "@solid-soda/tsn": ^1.2.3
     "@trip-a-trip/lib": ^1.13.0
+    "@types/bull": ^3.13.0
     "@types/lodash": ^4.14.151
     "@types/md5": ^2.2.0
     "@types/node": 12
     "@typescript-eslint/eslint-plugin": ^2.27.0
     "@typescript-eslint/parser": ^2.27.0
     "@yarnpkg/pnpify": ^2.0.0-rc.22
+    bull: ^3.14.0
     commitizen: ^4.0.4
     cz-conventional-changelog: ^3.1.0
     deepmerge: ^4.2.2
