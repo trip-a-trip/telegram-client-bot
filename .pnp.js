@@ -71,7 +71,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@trip-a-trip/lib",
-        "npm:1.13.0"
+        "npm:1.15.0"
       ],
       [
         "@types/bull",
@@ -223,7 +223,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/config", "npm:2.2.0"],
             ["@solid-soda/evolutions", "npm:0.1.2"],
             ["@solid-soda/tsn", "npm:1.2.3"],
-            ["@trip-a-trip/lib", "npm:1.13.0"],
+            ["@trip-a-trip/lib", "npm:1.15.0"],
             ["@types/bull", "npm:3.13.0"],
             ["@types/lodash", "npm:4.14.151"],
             ["@types/md5", "npm:2.2.0"],
@@ -726,10 +726,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@trip-a-trip/lib", [
-        ["npm:1.13.0", {
-          "packageLocation": "./.yarn/cache/@trip-a-trip-lib-npm-1.13.0-45ff32786a-3.zip/node_modules/@trip-a-trip/lib/",
+        ["npm:1.15.0", {
+          "packageLocation": "./.yarn/cache/@trip-a-trip-lib-npm-1.15.0-4f04848f44-3.zip/node_modules/@trip-a-trip/lib/",
           "packageDependencies": [
-            ["@trip-a-trip/lib", "npm:1.13.0"],
+            ["@trip-a-trip/lib", "npm:1.15.0"],
             ["axios", "npm:0.19.2"],
             ["qs", "npm:6.9.4"]
           ],
@@ -11622,7 +11622,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@solid-soda/config", "npm:2.2.0"],
             ["@solid-soda/evolutions", "npm:0.1.2"],
             ["@solid-soda/tsn", "npm:1.2.3"],
-            ["@trip-a-trip/lib", "npm:1.13.0"],
+            ["@trip-a-trip/lib", "npm:1.15.0"],
             ["@types/bull", "npm:3.13.0"],
             ["@types/lodash", "npm:4.14.151"],
             ["@types/md5", "npm:2.2.0"],
