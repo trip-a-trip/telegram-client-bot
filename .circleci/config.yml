@@ -25,7 +25,7 @@ workflows:
               only: /.*/
       - docker/build_push:
           org_name: 'tripatrip'
-          image_name: 'view-telegram'
+          image_name: 'telegram-client-bot'
           image_version: CIRCLE_TAG
           docker_username: DOCKER_USERNAME
           docker_password: DOCKER_PASSWORD
@@ -42,12 +42,12 @@ workflows:
           ssh_user: SSH_USER
           ssh_host: SSH_HOST
           org_name: 'tripatrip'
-          image_name: 'view-telegram'
+          image_name: 'telegram-client-bot'
           image_version: CIRCLE_TAG
           path_to_app: PATH_TO_APP
           apply_post_install: true
           post_install_script: 'yarn evolutions -y'
-          container_name: 'telegram_app'
+          container_name: 'client_telegram_bot'
           filters:
             tags:
               only: /.*/
